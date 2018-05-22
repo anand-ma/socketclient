@@ -7,6 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 export const appRoutes: Routes = [
     { path: '', component: DemoComponent },
     { path: 'message', component: MessageComponent },
+    { path: 'demo', component: DemoComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

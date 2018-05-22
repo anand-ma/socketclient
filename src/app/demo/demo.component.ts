@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as io from 'socket.io-client';
+import io from 'socket.io-client';
 
 @Component({
   selector: 'app-demo',
@@ -8,15 +8,18 @@ import * as io from 'socket.io-client';
 })
 export class DemoComponent implements OnInit {
   socket;
-  notifications: String[];
+  notifications: string[];
+  url = 'http://localhost:8181/';
+
   constructor() {
-    this.socket = io('http://localhost:8181/');
-    this.socket.on('message', function (data) {
+    this.notifications = [];
+    this.socket = io(this.url);
+
+  }
+  ngOnInit() {
+    this.socket.on('message', (data) => {
       console.log(data);
       this.notifications.push(data);
     });
   }
-  ngOnInit() {
-  }
-
 }
