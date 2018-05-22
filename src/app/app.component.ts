@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as io from 'socket.io-client';
+
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,6 @@ import * as io from 'socket.io-client';
 })
 export class AppComponent {
   title = 'app';
-  socket;
-  constructor() {
-    this.socket = io('http://localhost:8181/');
-    this.socket.on('message', function (data) {
-      console.log(data);
-    });
-  }
 
   ngOninit() {
 
