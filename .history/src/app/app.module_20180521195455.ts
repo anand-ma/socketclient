@@ -1,18 +1,14 @@
-import { routing } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MessageComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule,
-    routing
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

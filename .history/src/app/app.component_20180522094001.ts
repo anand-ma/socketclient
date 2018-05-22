@@ -11,8 +11,8 @@ export class AppComponent {
   socket;
   constructor() {
     this.socket = io('http://localhost:8181/');
-    this.socket.on('message', function (data) {
-      console.log(data);
+    this.socket.on('message', function () {
+      console.log('message from server');
     });
   }
 
