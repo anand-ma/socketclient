@@ -1,5 +1,7 @@
 {
   "name": "socketclient",
+  "description":
+    "This is a Client side code for websocket Demo, it needs its Node Server counterpart to work",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
